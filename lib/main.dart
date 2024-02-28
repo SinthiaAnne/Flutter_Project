@@ -60,30 +60,47 @@ class MyApp extends StatelessWidget {
 
 
         body: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
+          scrollDirection: Axis.vertical,
           child: Container(
-            // height: MediaQuery.sizeOf(context).height*.25,
-            // width: MediaQuery.sizeOf(context).width*.25,
+            height: MediaQuery.sizeOf(context).height,
+             width: MediaQuery.sizeOf(context).width,
           
             decoration: BoxDecoration(
-              color: Colors.blue.shade100,
-              //image: const DecorationImage(
-               // image:AssetImage('assets/pexels-photo-326055.webp'),
-               // fit: BoxFit.contain,
-                //image: NetworkImage('https://picsum.photos/200/300'),
-                ),
+              image: DecorationImage(
+                image: NetworkImage('https://cdn.pixabay.com/photo/2016/01/05/13/58/apple-1122537_1280.jpg'),
+                fit: BoxFit.cover,
+              ),
+            ),
+             
+            // decoration: BoxDecoration(
+              
+            //   color: Colors.blue.shade100,
+            //   //image: const DecorationImage(
+            //    // image:AssetImage('assets/pexels-photo-326055.webp'),
+            //    // fit: BoxFit.contain,
+                
+            //     ),
           
           
-              child: Row(
+              child: Column(
                 children: [
                   Container(  
                 margin: const EdgeInsets.all(12.0),  
-                padding: const EdgeInsets.all(8.0),  
+                padding: const EdgeInsets.all(8.0),
+                  
                 decoration:BoxDecoration(  
                     borderRadius:BorderRadius.circular(8),  
-                    color:Colors.green  
+                    color:Colors.green, 
+                  
                 ),  
-                child: const Text("Apple",style: TextStyle(color:Colors.yellowAccent,fontSize:25),),  
+                child: const Text("Apple",
+                style: TextStyle(
+                  color:Colors.yellowAccent,
+                  fontSize:25
+                  ),
+                  
+                  
+                ),  
               ), 
               
               Container(  
@@ -123,7 +140,9 @@ class MyApp extends StatelessWidget {
                     color:Colors.green  
                 ),  
                 child: const Text("Lemon",style: TextStyle(color:Colors.yellowAccent,fontSize:25),),  
-              ), 
+              ),
+              
+              
               
               
                 ],
