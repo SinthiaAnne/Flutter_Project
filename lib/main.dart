@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
                 const DrawerHeader(
                   child: Center(
                     child:Text(
-                      'Logo',
+                      'Home',
                       style: TextStyle(fontSize: 42),
                       ) ,
                     )
